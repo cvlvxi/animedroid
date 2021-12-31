@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     var selected by remember {mutableStateOf(false)}
-                    MyLottieAnim01(selected=selected, onClick={ selected=!selected})
+                    MyLottieAnim02(selected=selected, onClick={ selected=!selected})
                 }
             }
         }

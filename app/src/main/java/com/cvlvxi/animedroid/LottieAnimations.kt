@@ -1,12 +1,9 @@
 package com.cvlvxi.animedroid
 
 import androidx.compose.runtime.Composable
-import com.airbnb.lottie.compose.LottieAnimation
-import com.airbnb.lottie.compose.animateLottieCompositionAsState
-import com.airbnb.lottie.compose.rememberLottieComposition
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
-import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.*
 
 
 @Preview
@@ -16,6 +13,7 @@ fun MyLottieAnim01() {
     val progress by animateLottieCompositionAsState(composition)
     LottieAnimation(
         composition,
-        progress,
+//        progress,
+        iterations = LottieConstants.IterateForever
     )
 }

@@ -55,4 +55,7 @@ animedroid
 
 Checklist
 =========
-- [x] Use a Lottie Animation 
+- [x] Use a Lottie Animation
+  - https://github.com/airbnb/lottie-android
+
+- [x] 

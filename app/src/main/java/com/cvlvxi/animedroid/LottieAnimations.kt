@@ -1,5 +1,6 @@
 package com.cvlvxi.animedroid
 
+import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateIntOffsetAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
@@ -18,9 +19,12 @@ import com.airbnb.lottie.compose.*
 fun MyLottieAnim01(selected: Boolean = false, onClick: () -> Unit) {
     Box(modifier=Modifier.fillMaxSize().clickable { onClick() }) {
         val intOffset: IntOffset by animateIntOffsetAsState(
-            if (!selected) IntOffset(0, 0) else IntOffset(200, 0),
+            if (!selected) IntOffset(0, 0) else IntOffset(500, 0),
             animationSpec = tween(
-                durationMillis = 5000, 1000
+                durationMillis = 5000,
+                delayMillis = 1000,
+                easing =  LinearEasing
+
             )
         )
         val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.catwalk))
